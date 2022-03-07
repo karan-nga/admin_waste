@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Karan/AndroidStudioProjects/Admin_waste/app/src/main/res/layout/activity_add_category.xml" value="0.4" />
+        <entry key="..\:/Users/Karan/AndroidStudioProjects/Admin_waste/app/src/main/res/layout/activity_admin_login.xml" value="0.25" />
+        <entry key="..\:/Users/Karan/AndroidStudioProjects/Admin_waste/app/src/main/res/layout/activity_get_user_details.xml" value="0.25" />
+        <entry key="..\:/Users/Karan/AndroidStudioProjects/Admin_waste/app/src/main/res/layout/activity_main.xml" value="0.2359375" />
+        <entry key="..\:/Users/Karan/AndroidStudioProjects/Admin_waste/app/src/main/res/layout/activity_main2.xml" value="0.25" />
+        <entry key="..\:/Users/Karan/AndroidStudioProjects/Admin_waste/app/src/main/res/layout/activity_user_detail.xml" value="0.25" />
+        <entry key="..\:/Users/Karan/AndroidStudioProjects/Admin_waste/app/src/main/res/layout/get_all_activity.xml" value="0.2140625" />
+        <entry key="..\:/Users/Karan/AndroidStudioProjects/Admin_waste/app/src/main/res/layout/item_get_user_details.xml" value="0.25" />
+        <entry key="..\:/Users/Karan/AndroidStudioProjects/Admin_waste/app/src/main/res/layout/item_layout.xml" value="0.25" />
+        <entry key="..\:/Users/Karan/AndroidStudioProjects/Admin_waste/app/src/main/res/menu/nav_menu.xml" value="0.1" />
+        <entry key="..\:/Users/Karan/AndroidStudioProjects/Admin_waste/app/src/main/res/xml/xml.xml" value="0.25" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

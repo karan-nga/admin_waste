@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.rawtooth.admin_waste.user.user_detail">
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toobar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="    My Account"
+        android:background="#3490dc"
+        app:titleTextColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/toobar"
+        android:background="#3490dc"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+    <ImageView
+        android:id="@+id/user_iv1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/man"
+        android:layout_marginTop="60dp"/>
+    <TextView
+        android:id="@+id/user_tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Karan"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="@color/white"
+
+        android:textSize="28dp"
+        android:layout_marginTop="10dp"/>
+        <TextView
+            android:id="@+id/user_tv4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Role:ADMIN"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:id="@+id/user_tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+919817609433"
+            android:textSize="12sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/white"
+
+            android:layout_marginTop="15dp"/>
+        <TextView
+            android:id="@+id/user_tv3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="karannagra9924@gmail.com"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="9dp"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

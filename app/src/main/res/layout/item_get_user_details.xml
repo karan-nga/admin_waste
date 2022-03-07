@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_margin="10dp"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:orientation="vertical">
+   <TextView
+       android:id="@+id/getUseDetailsName"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="username"
+       style="@style/TextAppearance.AppCompat.Headline"
+       android:textColor="@color/black"/>
+    <TextView
+        android:id="@+id/getUseDetailsPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="9817609433"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/black"/>
+    <TextView
+        android:id="@+id/getUseDetailsemail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="username"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/black"/>
+
+</LinearLayout>
