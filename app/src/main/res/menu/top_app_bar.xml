@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<item
+    android:onClick="login"
+    android:title="login"
+    android:icon="@drawable/ic_baseline_login_24"
+    />
+    <item
+        android:onClick="viewCategory"
+        android:title="View Category"
+        android:icon="@drawable/category"/>
+    <item
+        android:onClick="viewUser"
+        android:title="View User"
+        android:icon="@drawable/user"/>
+    <item
+        android:onClick="ngoRegister"
+        android:title="Ngo Registration"
+        android:icon="@drawable/ngo"/>
+</menu>

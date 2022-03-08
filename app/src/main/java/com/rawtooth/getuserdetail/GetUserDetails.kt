@@ -1,4 +1,4 @@
-package com.rawtooth.getuser
+package com.rawtooth.getuserdetail
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -8,10 +8,8 @@ import com.easyvolley.Callback
 import com.easyvolley.EasyVolleyError
 import com.easyvolley.EasyVolleyResponse
 import com.easyvolley.NetworkClient
-import com.rawtooth.admin_waste.R
 import com.rawtooth.admin_waste.databinding.ActivityGetUserDetailsBinding
 import com.rawtooth.admin_waste.tokn
-import com.rawtooth.getAllCategory.Adapter
 
 class GetUserDetails : AppCompatActivity() {
     lateinit var binding: ActivityGetUserDetailsBinding

@@ -31,29 +31,34 @@
         android:layout_margin="20dp"
         android:textColorHint="@color/black"
         android:layout_marginTop="60dp"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnBrowse"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Choose file"
             android:layout_marginStart="20dp"
-            android:backgroundTint="#DF6F6F"
             android:layout_marginEnd="20dp"
+            android:backgroundTint="#DF6F6F"
+            android:text="Choose file"
             android:textAllCaps="false"
-            app:cornerRadius="10dp"/>
+            app:cornerRadius="10dp" />
+
         <ImageView
+            android:layout_gravity="center"
             android:id="@+id/browseImg"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:scaleType="fitXY"
             android:textColor="@color/black" />
 
 
     </LinearLayout>
+
     <ProgressBar
         android:id="@+id/progress_bar"
         style="@style/Widget.AppCompat.ProgressBar.Horizontal"

@@ -27,6 +27,7 @@ class user_detail : AppCompatActivity() {
                     binding.userTv1.text=it.name
                     binding.userTv2.text=it.phonenumber
                     binding.userTv3.text=it.email
+
                 }
             }
         }

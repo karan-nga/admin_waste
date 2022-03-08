@@ -1,7 +1,5 @@
 package com.rawtooth.admin_waste
 
-import android.R.attr.password
-import android.accounts.AccountManager.KEY_PASSWORD
 import android.app.Activity
 import android.content.Intent
 import android.net.Uri
@@ -15,6 +13,11 @@ import com.easyvolley.EasyVolleyResponse
 import com.easyvolley.NetworkClient
 import com.google.gson.Gson
 import com.rawtooth.admin_waste.databinding.ActivityAddCategoryBinding
+import okhttp3.MediaType
+import okhttp3.MultipartBody
+import okhttp3.RequestBody
+import retrofit2.Call
+import retrofit2.Response
 import java.io.File
 import java.io.FileInputStream
 import java.io.FileOutputStream
@@ -47,14 +50,39 @@ class AddCategory : AppCompatActivity(), View.OnClickListener ,UploadRequestBody
         val name=binding.edtNmae.text.toString()
         val description=binding.edtDes.text.toString()
         val categoryImage=UploadRequestBody(file,"image",this)
-       onCheck(name,description,categoryImage)
+//       +
+
+            MyApi().uploadImage("Bearer $tokn",MultipartBody.Part.createFormData("categoryImage",file.name,categoryImage),
+                RequestBody.create(MediaType.parse("multipart/form-data"), description),
+                RequestBody.create(MediaType.parse("multipart/form-data"), name))
+
+                .enqueue(object :retrofit2.Callback<String>{
+
+                    override fun onResponse(
+                        call: Call<String>,
+                        response: Response<String>
+                    ) {
+                        binding.progressBar.progress=100
+                        Log.d("code",response.body().toString())
+                        binding.layoutRoot.snackbar(response.body().toString())
+                        startActivity(Intent(this@AddCategory,MainActivity::class.java))
+                    }
+
+                    override fun onFailure(call: Call<String>, t: Throwable) {
+                        t.message?.let { binding.layoutRoot.snackbar(it) }
+                        t.message?.let { Log.e("code", it) }
+                    }
+                })
+
+
     }
+
     private fun onCheck(name:String, description:String, categoryImage: UploadRequestBody) {
 
         val body=Gson().toJson(CategoryPost(name,description,categoryImage))
-        NetworkClient.post("http://192.168.0.145:9090/category/")
+        NetworkClient.post("http://192.168.43.251:9090/category/")
             .addHeader("Content-Type", "multipart/form-data")
-            .addHeader("Authorization","Bearer "+ tokn)
+            .addHeader("Authorization", "Bearer $tokn")
             .addHeader("Content-Length", Integer.toString(body.length))
             .addHeader("Accept", "application/json")
             .setRequestBody(body)
@@ -62,11 +90,13 @@ class AddCategory : AppCompatActivity(), View.OnClickListener ,UploadRequestBody
                 override fun onSuccess(t: CategoryPost?, response: EasyVolleyResponse?) {
                     Log.d("code",t.toString())
                    binding.progressBar.progress=100
+                    Log.d("code",response.toString())
                     binding.layoutRoot.snackbar(response.toString())
                 }
 
                 override fun onError(error: EasyVolleyError?) {
                     Log.e("code","Error"+error!!.mStatusCode.toString() )
+                    Log.e("code",error.mMessage)
                     binding.layoutRoot.snackbar(error.mMessage)
                 }
                 protected fun getParams(): Map<String, String>? {
@@ -81,6 +111,7 @@ class AddCategory : AppCompatActivity(), View.OnClickListener ,UploadRequestBody
 
 
     }
+
 
     override fun onClick(p0: View?) {
         Intent(Intent.ACTION_PICK).also {

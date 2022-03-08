@@ -1,4 +1,4 @@
-package com.rawtooth.getuser
+package com.rawtooth.getuserdetail
 
 data class UserModelItem(
     val accountNonExpired: Boolean,

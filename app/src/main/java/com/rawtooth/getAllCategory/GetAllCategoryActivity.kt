@@ -40,7 +40,7 @@ class GetAllCategoryActivity : AppCompatActivity() {
                 }
 
                 override fun onError(error: EasyVolleyError?) {
-                    Log.e("code","Error"+error!!.mStatusCode.toString() )
+                    Log.e("code","Error"+error!!.mStatusCode.toString())
                 }
             })
             .execute()

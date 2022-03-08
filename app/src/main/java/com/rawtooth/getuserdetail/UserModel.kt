@@ -1,3 +1,3 @@
-package com.rawtooth.getuser
+package com.rawtooth.getuserdetail
 
 class UserModel : ArrayList<UserModelItem>()

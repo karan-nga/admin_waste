@@ -50,7 +50,7 @@ class admin_login : AppCompatActivity(), View.OnClickListener {
                             startActivity(Intent(this@admin_login, MainActivity::class.java))
                             tokn=t.token
                             val obj= details(t.user.username,t.user.email,t.user.phonenumber,t.token)
-                            val userInfo = User(null,obj.name,obj.number,obj.email)
+                            val userInfo = User(null,obj.name,obj.number,obj.email,obj.token)
                             GlobalScope.launch(Dispatchers.IO){
                                 UserDatabase.getInstance(applicationContext).userDao().insert(userInfo)
                             }
