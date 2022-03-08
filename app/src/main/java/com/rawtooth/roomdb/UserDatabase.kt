@@ -7,7 +7,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 
 
-@Database(entities = [User::class], version = 1)
+@Database(entities = [User::class], version = 2)
 abstract class UserDatabase:RoomDatabase (){
     abstract  fun userDao():UserDao
     companion object{
@@ -15,7 +15,7 @@ abstract class UserDatabase:RoomDatabase (){
         fun getInstance(context: Context):UserDatabase
         {
             if(INSTANCE==null){
-                INSTANCE=Room.databaseBuilder(context.applicationContext,UserDatabase::class.java,"User.db").build()
+                INSTANCE=Room.databaseBuilder(context.applicationContext,UserDatabase::class.java,"User.db").fallbackToDestructiveMigration().build()
             }
             return  INSTANCE!!
         }

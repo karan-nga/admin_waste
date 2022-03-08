@@ -52,7 +52,7 @@ class AddCategory : AppCompatActivity(), View.OnClickListener ,UploadRequestBody
     private fun onCheck(name:String, description:String, categoryImage: UploadRequestBody) {
 
         val body=Gson().toJson(CategoryPost(name,description,categoryImage))
-        NetworkClient.post("http://192.168.0.145:9090/category/")
+        NetworkClient.post("http://192.168.43.251:9090/category/")
             .addHeader("Content-Type", "multipart/form-data")
             .addHeader("Authorization","Bearer "+ tokn)
             .addHeader("Content-Length", Integer.toString(body.length))

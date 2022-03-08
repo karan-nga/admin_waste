@@ -37,7 +37,7 @@ class admin_login : AppCompatActivity(), View.OnClickListener {
 
     private fun onCheck(name: String, password: String) {
         val body=Gson().toJson(LoginPost(name,password))
-        NetworkClient.post("http://192.168.0.145:9090/generatetoken")
+        NetworkClient.post("http://192.168.43.251:9090/generatetoken")
             .addHeader("Content-Type", "application/json")
             .addHeader("Content-Length", Integer.toString(body.length))
             .addHeader("Accept", "application/json")
@@ -50,7 +50,7 @@ class admin_login : AppCompatActivity(), View.OnClickListener {
                             startActivity(Intent(this@admin_login, MainActivity::class.java))
                             tokn=t.token
                             val obj= details(t.user.username,t.user.email,t.user.phonenumber,t.token)
-                            val userInfo = User(null,obj.name,obj.number,obj.email)
+                            val userInfo = User(null,obj.name,obj.number,obj.email,obj.token)
                             GlobalScope.launch(Dispatchers.IO){
                                 UserDatabase.getInstance(applicationContext).userDao().insert(userInfo)
                             }

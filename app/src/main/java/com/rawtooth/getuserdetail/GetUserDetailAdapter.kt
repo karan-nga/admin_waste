@@ -1,4 +1,4 @@
-package com.rawtooth.getuser
+package com.rawtooth.getuserdetail
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.rawtooth.admin_waste.R
-import com.rawtooth.getAllCategory.GetAllModelItem
 
 class GetUserDetailAdapter(val context:Context) : RecyclerView.Adapter<GetUserDetailAdapter.GetUserVieHolder>() {
  var article:ArrayList<UserModelItem> = ArrayList<UserModelItem>()

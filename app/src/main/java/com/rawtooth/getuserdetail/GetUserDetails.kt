@@ -1,4 +1,4 @@
-package com.rawtooth.getuser
+package com.rawtooth.getuserdetail
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -8,10 +8,8 @@ import com.easyvolley.Callback
 import com.easyvolley.EasyVolleyError
 import com.easyvolley.EasyVolleyResponse
 import com.easyvolley.NetworkClient
-import com.rawtooth.admin_waste.R
 import com.rawtooth.admin_waste.databinding.ActivityGetUserDetailsBinding
 import com.rawtooth.admin_waste.tokn
-import com.rawtooth.getAllCategory.Adapter
 
 class GetUserDetails : AppCompatActivity() {
     lateinit var binding: ActivityGetUserDetailsBinding
@@ -25,7 +23,7 @@ class GetUserDetails : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        NetworkClient.get("http://192.168.0.145:9090/user/")
+        NetworkClient.get("http://192.168.43.251:9090/user/")
             .addHeader("Content-Type", "application/json")
             .addHeader("Authorization", "Bearer $tokn")
             .addHeader("Accept", "application/json")

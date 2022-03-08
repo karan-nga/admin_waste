@@ -15,7 +15,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Admin_waste">
         <activity
-            android:name="com.rawtooth.getuser.GetUserDetails"
+            android:name=".NgoRegister"
+            android:exported="false" />
+        <activity
+            android:name="com.rawtooth.getuserdetail.GetUserDetails"
             android:exported="false" />
         <activity
             android:name="com.rawtooth.getAllCategory.GetAllCategoryActivity"
