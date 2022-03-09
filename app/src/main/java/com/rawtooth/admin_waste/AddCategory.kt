@@ -50,7 +50,7 @@ class AddCategory : AppCompatActivity(), View.OnClickListener ,UploadRequestBody
         val name=binding.edtNmae.text.toString()
         val description=binding.edtDes.text.toString()
         val categoryImage=UploadRequestBody(file,"image",this)
-//       +
+
 
             MyApi().uploadImage("Bearer $tokn",MultipartBody.Part.createFormData("categoryImage",file.name,categoryImage),
                 RequestBody.create(MediaType.parse("multipart/form-data"), description),
