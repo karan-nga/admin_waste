@@ -20,7 +20,7 @@ interface MyApi {
     companion object {
         operator fun invoke(): MyApi{
             return Retrofit.Builder()
-                .baseUrl("http://192.168.0.145:9090/")
+                .baseUrl("http://192.168.43.251:9090/")
                 .addConverterFactory(ScalarsConverterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
