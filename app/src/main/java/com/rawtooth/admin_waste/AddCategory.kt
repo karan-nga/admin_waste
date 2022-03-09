@@ -23,7 +23,7 @@ import java.io.FileInputStream
 import java.io.FileOutputStream
 
 
-class AddCategory : AppCompatActivity(), View.OnClickListener ,UploadRequestBody.UploadCallBack{
+class AddCategory : AppCompatActivity(), View.OnClickListener ,UploadRequestBodyCategory.UploadCallBack{
     lateinit var binding: ActivityAddCategoryBinding
     private var selectImage: Uri?=null
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,9 +31,9 @@ class AddCategory : AppCompatActivity(), View.OnClickListener ,UploadRequestBody
         binding= ActivityAddCategoryBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.btnBrowse.setOnClickListener(this)
-        binding.btnSubmit.setOnClickListener{
-            uploadImage()
-        }
+//        binding.btnSubmit.setOnClickListener{
+//            uploadImage()
+//        }
     }
 
     private fun uploadImage() {
@@ -49,7 +49,7 @@ class AddCategory : AppCompatActivity(), View.OnClickListener ,UploadRequestBody
         binding.progressBar.progress=0
         val name=binding.edtNmae.text.toString()
         val description=binding.edtDes.text.toString()
-        val categoryImage=UploadRequestBody(file,"image",this)
+        val categoryImage=UploadRequestBodyCategory(file,"image",this)
 
 
             MyApi().uploadImage("Bearer $tokn",MultipartBody.Part.createFormData("categoryImage",file.name,categoryImage),

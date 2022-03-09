@@ -15,7 +15,25 @@
         android:title="View User"
         android:icon="@drawable/user"/>
     <item
-        android:onClick="ngoRegister"
-        android:title="Ngo Registration"
-        android:icon="@drawable/ngo"/>
+        android:title="View Society"
+        android:onClick="viewSociety"
+        android:icon="@drawable/society"/>
+    <group android:checkableBehavior="single">
+    <item android:title="Other">
+        <menu>
+            <item
+                android:title="Society Registration"
+                android:id="@+id/society"
+                android:onClick="societyRegister"
+                android:icon="@drawable/society"/>
+            <item
+                android:title="Ngo Registration"
+                android:id="@+id/ngo"
+                android:onClick="ngoRegister"
+                android:icon="@drawable/ngo"/>
+
+        </menu>
+
+    </item>
+</group>
 </menu>

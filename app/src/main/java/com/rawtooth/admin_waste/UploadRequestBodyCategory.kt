@@ -9,10 +9,10 @@ import java.io.FileInputStream
 import android.os.Handler
 
 
-class UploadRequestBody(
+class UploadRequestBodyCategory(
     private val file: File,
     private val contentType: String,
-    private val callback: SocietyRegistration
+    private val callback: UploadCallBack
 ) : RequestBody() {
     interface UploadCallBack{
         fun onProgressUpdate(percentage:Int)

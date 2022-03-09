@@ -10,6 +10,7 @@ import com.rawtooth.admin_waste.databinding.ActivityMainBinding
 import com.rawtooth.admin_waste.user.user_detail
 import com.rawtooth.getAllCategory.GetAllCategoryActivity
 import com.rawtooth.getuserdetail.GetUserDetails
+import com.rawtooth.viewsociety.ViewSocietyDetails
 
 class MainActivity : AppCompatActivity() {
     lateinit var toggle: ActionBarDrawerToggle
@@ -54,4 +55,10 @@ class MainActivity : AppCompatActivity() {
 fun ngoRegister(menuItem: MenuItem){
     startActivity(Intent(this,NgoRegister::class.java))
 }
+    fun societyRegister(menuItem: MenuItem){
+        startActivity(Intent(this,SocietyRegistration::class.java))
+    }
+    fun viewSociety(menuItem: MenuItem){
+        startActivity(Intent(this,ViewSocietyDetails::class.java))
+    }
 }

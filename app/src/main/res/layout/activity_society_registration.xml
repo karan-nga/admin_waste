@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layout_root"
+    android:orientation="vertical"
+    android:background="@drawable/category_back"
+    tools:context=".SocietyRegistration">
+    <com.google.android.material.appbar.MaterialToolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        app:title="Add Your Society"
+        android:background="#DF6F6F"
+        app:titleTextColor="@color/white"/>
+    <EditText
+        android:id="@+id/societyNmae"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Society name"
+        android:layout_margin="20dp"
+        android:textColorHint="@color/black"
+        android:layout_marginTop="60dp"/>
+    <EditText
+        android:id="@+id/societyEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:layout_margin="20dp"
+        android:textColorHint="@color/black"
+        android:layout_marginTop="60dp"/>
+    <EditText
+        android:id="@+id/societyAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Society Address"
+        android:layout_margin="20dp"
+        android:textColorHint="@color/black"
+        android:layout_marginTop="60dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose society\n image"
+            android:textSize="15sp"
+            android:textColor="@color/black"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBrowse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:backgroundTint="#DF6F6F"
+            android:text="Choose file"
+            android:textAllCaps="false"
+            app:cornerRadius="10dp" />
+
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@+id/browseImg"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="fitXY"
+            android:textColor="@color/black" />
+
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        tools:progress="40" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:backgroundTint="#DF6F6F"
+        app:cornerRadius="20dp"
+        android:layout_marginTop="20dp"
+        android:textAllCaps="false"
+        android:layout_gravity="center"/>
+
+
+
+</LinearLayout>
