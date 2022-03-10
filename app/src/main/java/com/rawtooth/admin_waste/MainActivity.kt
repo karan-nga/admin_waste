@@ -10,6 +10,7 @@ import com.rawtooth.admin_waste.databinding.ActivityMainBinding
 import com.rawtooth.admin_waste.user.user_detail
 import com.rawtooth.getAllCategory.GetAllCategoryActivity
 import com.rawtooth.getuserdetail.GetUserDetails
+import com.rawtooth.industry.IndustryRegisterActivity
 import com.rawtooth.viewsociety.ViewSocietyDetails
 
 class MainActivity : AppCompatActivity() {
@@ -60,5 +61,8 @@ fun ngoRegister(menuItem: MenuItem){
     }
     fun viewSociety(menuItem: MenuItem){
         startActivity(Intent(this,ViewSocietyDetails::class.java))
+    }
+    fun industryRegister(menuItem: MenuItem){
+        startActivity(Intent(this,IndustryRegisterActivity::class.java))
     }
 }

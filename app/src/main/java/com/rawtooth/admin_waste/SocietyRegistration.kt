@@ -18,7 +18,7 @@ import java.io.File
 import java.io.FileInputStream
 import java.io.FileOutputStream
 
-class SocietyRegistration : AppCompatActivity(), View.OnClickListener,UploadRequestBodyCategory.UploadCallBack {
+class SocietyRegistration : AppCompatActivity(), View.OnClickListener,UploadRequestBody.UploadCallBack {
     lateinit var binding: ActivitySocietyRegistrationBinding
     private var selectImage: Uri?=null
     override fun onCreate(savedInstanceState: Bundle?) {

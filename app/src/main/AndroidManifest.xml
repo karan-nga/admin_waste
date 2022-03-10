@@ -15,6 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Admin_waste">
         <activity
+            android:name="com.rawtooth.industry.IndustryRegisterActivity"
+            android:exported="false" />
+        <activity
             android:name="com.rawtooth.viewsociety.ViewSocietyDetails"
             android:exported="false" />
         <activity

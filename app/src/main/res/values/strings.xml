@@ -2,4 +2,14 @@
     <string name="app_name">Admin_waste</string>
     <string name="open">open</string>
     <string name="close">close</string>
+    <string-array name="spinnerItems">
+        <item>Primary</item>
+        <item>Secondary</item>
+        <item>Tertiary</item>
+    </string-array>
+    <string-array name="sector">
+    <item>Government</item>
+    <item>Private</item>
+    <item>Public</item><item>Mix</item>
+</string-array>
 </resources>

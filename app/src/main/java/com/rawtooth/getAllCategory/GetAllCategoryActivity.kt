@@ -26,7 +26,7 @@ class GetAllCategoryActivity : AppCompatActivity() {
 
         setContentView(binding.root)
 
-        NetworkClient.get("http://192.168.43.251:9090/category/getAllWasteCategory")
+        NetworkClient.get("http://192.168.0.145:9090/category/getAllWasteCategory")
             .addHeader("Content-Type", "application/json")
             .addHeader("Authorization", "Bearer $tokn")
             .addHeader("Accept", "application/json")

@@ -19,7 +19,7 @@
         android:onClick="viewSociety"
         android:icon="@drawable/society"/>
     <group android:checkableBehavior="single">
-    <item android:title="Other">
+    <item android:title="Registration">
         <menu>
             <item
                 android:title="Society Registration"
@@ -31,6 +31,11 @@
                 android:id="@+id/ngo"
                 android:onClick="ngoRegister"
                 android:icon="@drawable/ngo"/>
+            <item
+                android:title="Industry Registration"
+                android:id="@+id/industry"
+                android:onClick="industryRegister"
+                android:icon="@drawable/factory"/>
 
         </menu>
 

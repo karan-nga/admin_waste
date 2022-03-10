@@ -22,7 +22,7 @@ class ViewSocietyDetails : AppCompatActivity() {
         binding.recycle.adapter=adapter
         binding.recycle.layoutManager=LinearLayoutManager(this)
         setContentView(binding.root)
-        NetworkClient.get("http://192.168.43.251:9090/society/getAllSociety")
+        NetworkClient.get("http://192.168.0.145:9090/society/getAllSociety")
             .addHeader("Content-Type", "application/json")
             .addHeader("Authorization", "Bearer $tokn")
             .addHeader("Accept", "application/json")
