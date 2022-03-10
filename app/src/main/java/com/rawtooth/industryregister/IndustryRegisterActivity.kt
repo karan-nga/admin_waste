@@ -1,4 +1,4 @@
-package com.rawtooth.industry
+package com.rawtooth.industryregister
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

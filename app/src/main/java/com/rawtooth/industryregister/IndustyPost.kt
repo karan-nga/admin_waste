@@ -1,6 +1,6 @@
-package com.rawtooth.industry
+package com.rawtooth.industryregister
 
-import android.widget.Spinner
+
 
 data class IndustyPost(
     val name: String,

@@ -9,8 +9,9 @@ import com.easyvolley.NetworkClient
 import com.rawtooth.admin_waste.databinding.ActivityMainBinding
 import com.rawtooth.admin_waste.user.user_detail
 import com.rawtooth.getAllCategory.GetAllCategoryActivity
+import com.rawtooth.getindustrydetails.GetIndustryDetailsActivity
 import com.rawtooth.getuserdetail.GetUserDetails
-import com.rawtooth.industry.IndustryRegisterActivity
+import com.rawtooth.industryregister.IndustryRegisterActivity
 import com.rawtooth.viewsociety.ViewSocietyDetails
 
 class MainActivity : AppCompatActivity() {
@@ -64,5 +65,8 @@ fun ngoRegister(menuItem: MenuItem){
     }
     fun industryRegister(menuItem: MenuItem){
         startActivity(Intent(this,IndustryRegisterActivity::class.java))
+    }
+    fun viewIndustry(menuItem: MenuItem){
+        startActivity(Intent(this,GetIndustryDetailsActivity::class.java))
     }
 }

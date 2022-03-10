@@ -8,8 +8,9 @@
         <item>Tertiary</item>
     </string-array>
     <string-array name="sector">
-    <item>Government</item>
-    <item>Private</item>
-    <item>Public</item><item>Mix</item>
-</string-array>
+        <item>Government</item>
+        <item>Private</item>
+        <item>Public</item>
+        <item>Mix</item>
+    </string-array>
 </resources>

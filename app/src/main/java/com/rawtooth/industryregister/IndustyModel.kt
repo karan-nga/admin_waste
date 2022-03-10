@@ -1,4 +1,4 @@
-package com.rawtooth.industry
+package com.rawtooth.industryregister
 
 data class IndustyModel(
     val address: String,

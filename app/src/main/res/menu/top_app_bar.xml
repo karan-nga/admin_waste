@@ -18,6 +18,11 @@
         android:title="View Society"
         android:onClick="viewSociety"
         android:icon="@drawable/society"/>
+    <item
+        android:title="View Industry"
+        android:id="@+id/getindustry"
+        android:onClick="viewIndustry"
+        android:icon="@drawable/factory"/>
     <group android:checkableBehavior="single">
     <item android:title="Registration">
         <menu>
