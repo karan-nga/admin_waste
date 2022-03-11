@@ -1,29 +1,35 @@
-package com.rawtooth.admin_waste
+package com.rawtooth.ngoregister
+
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.converter.scalars.ScalarsConverterFactory
-import retrofit2.http.*
-interface MySocietyApi {
+import retrofit2.http.Header
+import retrofit2.http.Multipart
+import retrofit2.http.POST
+import retrofit2.http.Part
+
+interface MyNgoApi {
     @Multipart
-    @POST("society/")
-    fun uploadImage2(
+    @POST("/ngo/")
+    fun uplodImage(
         @Header("Authorization") token : String,
-        @Part societyImage: MultipartBody.Part,
+        @Part image: MultipartBody.Part,
+        @Part("description") desc: RequestBody,
         @Part("name") name: RequestBody,
-        @Part("email") email: RequestBody,
-        @Part("address") address:RequestBody
+        @Part("location") location:RequestBody,
+        @Part("ngoType") ngoType:RequestBody
     ): Call<String>
-    companion object {
-        operator fun invoke():MySocietyApi{
+    companion object{
+        operator fun invoke():MyNgoApi{
             return Retrofit.Builder()
                 .baseUrl("http://192.168.43.251:9090/")
                 .addConverterFactory(ScalarsConverterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
-                .build().create(MySocietyApi::class.java)
+                .build()
+                .create(MyNgoApi::class.java)
         }
-
     }
 }

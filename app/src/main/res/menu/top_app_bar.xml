@@ -19,6 +19,11 @@
         android:onClick="viewSociety"
         android:icon="@drawable/society"/>
     <item
+        android:title="View Ngo"
+        android:id="@+id/viewngo"
+
+        android:icon="@drawable/ngo"/>
+    <item
         android:title="View Industry"
         android:id="@+id/getindustry"
         android:onClick="viewIndustry"

@@ -10,8 +10,10 @@ import com.rawtooth.admin_waste.databinding.ActivityMainBinding
 import com.rawtooth.admin_waste.user.user_detail
 import com.rawtooth.getAllCategory.GetAllCategoryActivity
 import com.rawtooth.getindustrydetails.GetIndustryDetailsActivity
+import com.rawtooth.getngodetails.GetNgoDetailsActivity
 import com.rawtooth.getuserdetail.GetUserDetails
 import com.rawtooth.industryregister.IndustryRegisterActivity
+import com.rawtooth.ngoregister.NgoRegister
 import com.rawtooth.viewsociety.ViewSocietyDetails
 
 class MainActivity : AppCompatActivity() {
@@ -55,7 +57,7 @@ class MainActivity : AppCompatActivity() {
         startActivity(Intent(this,GetUserDetails::class.java))
     }
 fun ngoRegister(menuItem: MenuItem){
-    startActivity(Intent(this,NgoRegister::class.java))
+    startActivity(Intent(this, NgoRegister::class.java))
 }
     fun societyRegister(menuItem: MenuItem){
         startActivity(Intent(this,SocietyRegistration::class.java))
@@ -69,4 +71,7 @@ fun ngoRegister(menuItem: MenuItem){
     fun viewIndustry(menuItem: MenuItem){
         startActivity(Intent(this,GetIndustryDetailsActivity::class.java))
     }
+//    fun viewngo(menuItem: MenuItem){
+//        startActivity(Intent(this,GetNgoDetailsActivity::class.java))
+//    }
 }

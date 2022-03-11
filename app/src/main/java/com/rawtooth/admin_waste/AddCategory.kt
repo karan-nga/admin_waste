@@ -31,9 +31,9 @@ class AddCategory : AppCompatActivity(), View.OnClickListener ,UploadRequestBody
         binding= ActivityAddCategoryBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.btnBrowse.setOnClickListener(this)
-//        binding.btnSubmit.setOnClickListener{
-//            uploadImage()
-//        }
+        binding.btnSubmit.setOnClickListener{
+            uploadImage()
+        }
     }
 
     private fun uploadImage() {

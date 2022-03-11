@@ -13,4 +13,9 @@
         <item>Public</item>
         <item>Mix</item>
     </string-array>
+    <string-array name="ngotype">
+        <item>Social Benefit</item>
+        <item>Profit</item>
+        <item>Non-Profit</item>
+    </string-array>
 </resources>

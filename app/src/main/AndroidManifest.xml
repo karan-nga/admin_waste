@@ -15,6 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Admin_waste">
         <activity
+            android:name="com.rawtooth.getngodetails.GetNgoDetailsActivity"
+            android:exported="false" />
+        <activity
             android:name="com.rawtooth.industryregister.IndustryRegisterActivity"
             android:exported="false" />
         <activity
@@ -24,13 +27,14 @@
             android:name=".SocietyRegistration"
             android:exported="false" />
         <activity
-            android:name=".NgoRegister"
+            android:name="com.rawtooth.ngoregister.NgoRegister"
             android:exported="false" />
         <activity
             android:name="com.rawtooth.getuserdetail.GetUserDetails"
             android:exported="false" />
-        <activity android:name="com.rawtooth.getindustrydetails.GetIndustryDetailsActivity"
-            android:exported="true"/>
+        <activity
+            android:name="com.rawtooth.getindustrydetails.GetIndustryDetailsActivity"
+            android:exported="true" />
         <activity
             android:name="com.rawtooth.getAllCategory.GetAllCategoryActivity"
             android:exported="false" />

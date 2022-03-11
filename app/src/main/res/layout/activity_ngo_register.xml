@@ -1,9 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NgoRegister">
+    android:orientation="vertical"
+    tools:context="com.rawtooth.ngoregister.NgoRegister">
+    <com.google.android.material.appbar.MaterialToolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="Ngo Register"
+        android:background="#03A9F4"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Please enter your details"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginStart="20dp"
+        android:textColor="#03A9F4"/>
+    <EditText
+        android:id="@+id/ngo_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Ngo name"
+        android:layout_margin="20dp"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        android:textColorHint="@color/black" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="Select Ngo Type"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginStart="20dp"
+            android:textColor="#03A9F4"/>
+        <Spinner
+            android:id="@+id/ngotype"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawSelectorOnTop="true"
+            android:entries="@array/ngotype"
+            />
+
+    </LinearLayout>
+    <EditText
+        android:id="@+id/ngo_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter description"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        android:layout_margin="20dp"
+        android:textColorHint="@color/black" />
+    <EditText
+        android:id="@+id/ngo_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Ngo address"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        android:layout_margin="20dp"
+        android:textColorHint="@color/black" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose Ngo\n image"
+            android:textSize="15sp"
+            android:gravity="center"
+
+            android:textColor="@color/black"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/ngo_btnBrowse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:backgroundTint="#03A9F4"
+            android:text="Choose file"
+            android:gravity="center"
+            android:textAllCaps="false"
+            app:cornerRadius="10dp" />
+
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@+id/ngo_ViewImg"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="fitXY"
+            android:textColor="@color/black" />
+
+
+    </LinearLayout>
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:layout_margin="25dp"
+        tools:progress="40" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/ngo_submit"
+        android:layout_margin="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Submit"
+        android:textAllCaps="false"
+        android:layout_gravity="center"
+        app:cornerRadius="20dp"/>
+
+</LinearLayout>
