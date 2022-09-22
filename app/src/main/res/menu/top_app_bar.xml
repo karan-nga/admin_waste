@@ -46,6 +46,11 @@
                 android:id="@+id/industry"
                 android:onClick="industryRegister"
                 android:icon="@drawable/factory"/>
+            <item
+                android:title="Slum Registration"
+                android:id="@+id/slum"
+                android:onClick="slumRegistration"
+                android:icon="@drawable/factory"/>
 
         </menu>
 

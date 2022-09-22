@@ -12,6 +12,7 @@ import com.easyvolley.EasyVolleyError
 import com.easyvolley.EasyVolleyResponse
 import com.easyvolley.NetworkClient
 import com.google.gson.Gson
+import com.rawtooth.Constant
 import com.rawtooth.admin_waste.databinding.ActivityAddCategoryBinding
 import okhttp3.MediaType
 import okhttp3.MultipartBody
@@ -80,7 +81,7 @@ class AddCategory : AppCompatActivity(), View.OnClickListener ,UploadRequestBody
     private fun onCheck(name:String, description:String, categoryImage: UploadRequestBody) {
 
         val body=Gson().toJson(CategoryPost(name,description,categoryImage))
-        NetworkClient.post("http://192.168.43.251:9090/category/")
+        NetworkClient.post("${Constant.baseurl}category/")
             .addHeader("Content-Type", "multipart/form-data")
             .addHeader("Authorization", "Bearer $tokn")
             .addHeader("Content-Length", Integer.toString(body.length))

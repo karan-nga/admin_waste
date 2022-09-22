@@ -1,5 +1,6 @@
 package com.rawtooth.ngoregister
 
+import com.rawtooth.Constant
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import retrofit2.Call
@@ -25,7 +26,7 @@ interface MyNgoApi {
     companion object{
         operator fun invoke():MyNgoApi{
             return Retrofit.Builder()
-                .baseUrl("http://192.168.43.251:9090/")
+                .baseUrl(Constant.baseurl)
                 .addConverterFactory(ScalarsConverterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()

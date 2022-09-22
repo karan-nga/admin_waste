@@ -8,6 +8,7 @@ import com.easyvolley.EasyVolleyError
 import com.easyvolley.EasyVolleyResponse
 import com.easyvolley.NetworkClient
 import com.google.gson.Gson
+import com.rawtooth.Constant
 import com.rawtooth.admin_waste.databinding.ActivityIndustryRegisterBinding
 import com.rawtooth.admin_waste.tokn
 
@@ -30,7 +31,7 @@ class IndustryRegisterActivity : AppCompatActivity() {
         val sector=binding.spinnerSector.selectedItem.toString()
         val address=binding.industryAddress.text.toString()
         val body= Gson().toJson(IndustyPost(name,email,industryType,description, sector,address))
-        NetworkClient.post("http://192.168.43.251:9090/industry/")
+        NetworkClient.post("${Constant.baseurl}/industry/")
             .addHeader("Content-Type", "application/json")
             .addHeader("Authorization", "Bearer $tokn")
             .addHeader("Content-Length", Integer.toString(body.length))

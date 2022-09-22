@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="com.rawtooth.slumarea.SlumRegister">
+    <com.google.android.material.appbar.MaterialToolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        app:title="SLum Register"
+        android:background="#03A9F4"
+        app:titleTextColor="@color/white"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Please enter your details"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginStart="20dp"
+        android:textColor="#03A9F4"/>
+    <EditText
+        android:id="@+id/slum_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter slum email"
+        android:layout_margin="20dp"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        android:textColorHint="@color/black" />
+    <EditText
+        android:id="@+id/slum_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter slum location"
+        android:layout_margin="20dp"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        android:textColorHint="@color/black" />
+    <EditText
+        android:id="@+id/slum_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter slum description"
+        android:layout_margin="20dp"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        android:textColorHint="@color/black" />
+    <EditText
+        android:id="@+id/slum_contact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter slum contact details"
+        android:layout_margin="20dp"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        android:textColorHint="@color/black" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/registerslum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:cornerRadius="10dp"
+        android:text="Register"
+        android:textAllCaps="false"/>
+
+
+</LinearLayout>

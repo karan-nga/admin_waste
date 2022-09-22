@@ -29,6 +29,25 @@
         <entry key="..\:/Users/Karan/AndroidStudioProjects/Admin_waste/app/src/main/res/menu/top_app_bar.xml" value="0.1" />
         <entry key="..\:/Users/Karan/AndroidStudioProjects/Admin_waste/app/src/main/res/menu/top_app_bar2.xml" value="0.25" />
         <entry key="..\:/Users/Karan/AndroidStudioProjects/Admin_waste/app/src/main/res/xml/xml.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_add_category.xml" value="0.3463541666666667" />
+        <entry key="app/src/main/res/layout/activity_admin_login.xml" value="0.17239583333333333" />
+        <entry key="app/src/main/res/layout/activity_get_ngo_details.xml" value="0.3463541666666667" />
+        <entry key="app/src/main/res/layout/activity_get_user_details.xml" value="0.3463541666666667" />
+        <entry key="app/src/main/res/layout/activity_industry_register.xml" value="0.3463541666666667" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.3463541666666667" />
+        <entry key="app/src/main/res/layout/activity_ngo_register.xml" value="0.3463541666666667" />
+        <entry key="app/src/main/res/layout/activity_slum_register.xml" value="0.32708333333333334" />
+        <entry key="app/src/main/res/layout/activity_society_registration.xml" value="0.3463541666666667" />
+        <entry key="app/src/main/res/layout/activity_user_detail.xml" value="0.3463541666666667" />
+        <entry key="app/src/main/res/layout/activity_view_society_details.xml" value="0.3463541666666667" />
+        <entry key="app/src/main/res/layout/get_all_activity.xml" value="0.17239583333333333" />
+        <entry key="app/src/main/res/layout/get_indusrty_detail_item_layout.xml" value="0.17239583333333333" />
+        <entry key="app/src/main/res/layout/get_ngo_detais_item_layout.xml" value="0.3463541666666667" />
+        <entry key="app/src/main/res/layout/get_society_details_items_layout.xml" value="0.17239583333333333" />
+        <entry key="app/src/main/res/layout/item_get_user_details.xml" value="0.3463541666666667" />
+        <entry key="app/src/main/res/menu/nav_menu.xml" value="0.3463541666666667" />
+        <entry key="app/src/main/res/menu/top_app_bar.xml" value="0.3463541666666667" />
+        <entry key="app/src/main/res/menu/top_app_bar2.xml" value="0.3463541666666667" />
       </map>
     </option>
   </component>

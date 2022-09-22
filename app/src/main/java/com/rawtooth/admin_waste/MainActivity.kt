@@ -14,6 +14,7 @@ import com.rawtooth.getngodetails.GetNgoDetailsActivity
 import com.rawtooth.getuserdetail.GetUserDetails
 import com.rawtooth.industryregister.IndustryRegisterActivity
 import com.rawtooth.ngoregister.NgoRegister
+import com.rawtooth.slumarea.SlumRegister
 import com.rawtooth.viewsociety.ViewSocietyDetails
 
 class MainActivity : AppCompatActivity() {
@@ -70,6 +71,9 @@ fun ngoRegister(menuItem: MenuItem){
     }
     fun viewIndustry(menuItem: MenuItem){
         startActivity(Intent(this,GetIndustryDetailsActivity::class.java))
+    }
+    fun slumRegistration(menuItem: MenuItem){
+        startActivity(Intent(this,SlumRegister::class.java))
     }
 //    fun viewngo(menuItem: MenuItem){
 //        startActivity(Intent(this,GetNgoDetailsActivity::class.java))

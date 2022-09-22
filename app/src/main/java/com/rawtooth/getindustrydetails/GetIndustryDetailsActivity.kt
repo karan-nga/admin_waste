@@ -8,6 +8,7 @@ import com.easyvolley.Callback
 import com.easyvolley.EasyVolleyError
 import com.easyvolley.EasyVolleyResponse
 import com.easyvolley.NetworkClient
+import com.rawtooth.Constant
 import com.rawtooth.admin_waste.R
 import com.rawtooth.admin_waste.databinding.ActivityGetIndustryDetailsBinding
 import com.rawtooth.admin_waste.tokn
@@ -23,7 +24,7 @@ class GetIndustryDetailsActivity : AppCompatActivity() {
         binding.recycle.adapter=adapter
         binding.recycle.layoutManager=LinearLayoutManager(this)
         setContentView(binding.root)
-        NetworkClient.get("http://192.168.43.251:9090/industry/getAllIndustries")
+        NetworkClient.get("${Constant.baseurl}industry/getAllIndustries")
             .addHeader("Content-Type", "application/json")
             .addHeader("Authorization", "Bearer $tokn")
             .addHeader("Accept", "application/json")

@@ -11,6 +11,7 @@ import com.easyvolley.EasyVolleyError
 import com.easyvolley.EasyVolleyResponse
 import com.easyvolley.NetworkClient
 import com.google.gson.Gson
+import com.rawtooth.Constant
 import com.rawtooth.admin_waste.databinding.ActivityAdminLoginBinding
 import com.rawtooth.admin_waste.models.TokenResponse
 import com.rawtooth.admin_waste.roomdb.User
@@ -37,7 +38,7 @@ class admin_login : AppCompatActivity(), View.OnClickListener {
 
     private fun onCheck(name: String, password: String) {
         val body=Gson().toJson(LoginPost(name,password))
-        NetworkClient.post("http://192.168.43.251:9090/generatetoken")
+        NetworkClient.post("${Constant.baseurl}generatetoken")
             .addHeader("Content-Type", "application/json")
             .addHeader("Content-Length", Integer.toString(body.length))
             .addHeader("Accept", "application/json")
