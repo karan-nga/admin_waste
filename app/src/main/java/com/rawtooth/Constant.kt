@@ -1,5 +1,5 @@
 package com.rawtooth
 
 object Constant {
-    val baseurl="http://192.168.123.251:9090/"
+    val baseurl="http://192.168.0.145:9090/"
 }

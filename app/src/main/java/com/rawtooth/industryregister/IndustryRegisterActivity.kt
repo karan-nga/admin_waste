@@ -31,7 +31,7 @@ class IndustryRegisterActivity : AppCompatActivity() {
         val sector=binding.spinnerSector.selectedItem.toString()
         val address=binding.industryAddress.text.toString()
         val body= Gson().toJson(IndustyPost(name,email,industryType,description, sector,address))
-        NetworkClient.post("${Constant.baseurl}/industry/")
+        NetworkClient.post("${Constant.baseurl}industry/")
             .addHeader("Content-Type", "application/json")
             .addHeader("Authorization", "Bearer $tokn")
             .addHeader("Content-Length", Integer.toString(body.length))
